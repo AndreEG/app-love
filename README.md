@@ -1,59 +1,44 @@
-# AppLove
+# CLASE PRÁCTICA
+## Replicar el siguiente ejercicio
+![Pagina a raplicar](assets/images/replicar.png "titulo")
 
-* **Track:** _Common Core_
-* **Curso:** _Creando tu primer sitio web interactivo_
-* **Unidad:** _Maquetado web con HTML & CSS_
+### HTML
+Lo primero a realizar es la maquetación HTML que tendrá un encabezado, 4 sections y un footer, dentro de los cuales se ingresará los textos e imagenes correspondientes.
 
-***
-Para completar tu web **AppLove** hemos creado este repositorio boilerplate (plantilla inicial) con todos los recursos que necesitas. Esto incluye las imágenes y algunas clases CSS que ya hemos creado para ti :)
+```
+		
+	//<body>
+        <header>
+        </header>
 
-## Flujo de trabajo: Empieza por realizar un fork y clonar este repositorio
+        <section>
+        </section>
 
-1. Debes realizar un [**fork**](https://gist.github.com/ivandevp/1de47ae69a5e139a6622d78c882e1f74) de este repositorio
+        <section>
+        </section>
 
-2. Luego deberás **clonar** tu fork en tu máquina. Recuerda que el comando a usar es `git clone` y su estructura normalmente se ve así:
+        <section>
+        </section>
 
-    ```bash
-    git clone https://github.com/<nombre-de-usuario>/AppLove.git
-    ```
+        <section>
+        </section>
 
-## Objetivo
+        <footer>
+        </footer>
+    </body>
+		
+```
+### CSS
+Al HEADER le aplicamos position FIXED y hacemos que cubra el resto de elementos mediante Z-INDEX; a los UL se les hizo flotar hacia la izquierda para que se posicionaran tal cual el ejemplo y se hace flotar al logo al lado derecho por la misma razón; a los LI se les aplico DISPLAY inline-block para que pudieran posicionarse uno al lado del otro.
 
-El reto consiste en maquetar la web **AppLove**, este es el resultado final:
+Al SECTION1 le agregamos una imagen que ocupe todo el ancho con position RELATIVE para que el resto del texto con position ABSOLUTE puedan ir sobre la imagen ya mencionada.
 
-![AppLove](https://fotos.subefotos.com/1edc0aab51f1d624da4a24ab86129d87o.png) 
+Al SECTION2 se le aplico un color de fondo rosa los 2 primeros solo centrados y las siguientes cajas en con DISPLAY inline-block para que esten una al lado de la otra.
 
-## Detalles adicionales
+Al SECTION3 solo se agrego texto e imagen centradas.
 
-- Encontrarás un archivo base `index.html` el cual contiene una estructura inicial sobre la que deberás completar tu proyecto.
+Al SECTION4 se aplico la clase container para que el resultado pueda tener dimensiones fijas y overflow HIDEN para que sus elementos hijos respeten sus dimensiones, se hizo una caja por imagen la cual contenia la imagen y el texto debajo, a dicha caja se le aplico FLOAT para que flotara a la izquierda y pueda visualizarse una continua de la otra.
 
-- En la carpeta `css` tendrás un archivo base `main.css` donde hay clases reutilizables, quiere decir que dichas clases pueden ser usadas más de una vez. Por ejemplo: 
+Al FOOTER
 
-    ```CSS
-    .text-uppercase {
-      text-transform: uppercase;
-    }
-    ```
 
-    >Si usamos la clase `.text-uppercase` en algún texto lo que hará es ponerlo en mayúsculas. De esta manera podrás reutilizar esta clase varias veces. **No olvides enlazar tu archivo `CSS` a tu `HTML`**.
-
-- El `header` tiene que estar **estático**, como se muestra en la siguiente _imagen gif_:
-
-![AppLove-gif](https://fotos.subefotos.com/da068e44cb72b36ba6c4458130c00185o.gif) 
-
-- Dentro de la carpeta `assets` se encuentra la carpeta `images` donde encontrarás todas las imágenes necesarias para completar tu proyecto.
-
-- Deberás **actualizar el archivo `README.md`** explicando el contenido de tu repositorio.
-
-- El tipo de fuente a utilizar será `Raleway`.
-
-## Consideraciones generales
-
-Este reto sera evaluado sobre lo siguiente:
-
-- Pixel perfect (replicar el diseño con exactitud)
-- Nombramiento de clases, id, etc
-- Indentación
-- Estructura de tus archivos
-- Archivo `README.md` actualizado y correctamente redactado
-- Uso de comentarios para hacer tu código más legible
