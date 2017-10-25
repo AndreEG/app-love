@@ -1,4 +1,5 @@
 /*CLASES REUTILIZABLES*/
+
 * {
   font-family: 'Raleway', sans-serif;
   -webkit-box-sizing: border-box;
@@ -6,187 +7,20 @@
   box-sizing: border-box;
 }
 
-*:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 body {
-  margin: 0 auto;
-  padding-top: 100px;
   font-size: 16px;
   line-height: 1.71429;
-}
-
-header {
-  box-sizing: border-box;
-  width: 100%;
-  /*outline: 1px solid blue;*/
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  background-color: white;
-  z-index: 1000;
-}
-ul {
-  /*outline: 1px solid red;*/
-  float: left;
-  list-style: none;
-  margin: 0 0 0 130px;
-  padding: 0;
-}
-
-li {
-  /*outline: 1px solid green;*/
-  display: inline-block;
-  margin: 35px 20px;
-  font-weight: bold;
-}
-
-header img {
-  width: 70px;
-  float: right;
-  margin: 15px 150px 15px 15px;
-}
-
-.section-1{
-  text-align: center;
-  position: relative;
-  color: white;
-}
-.section-1 img{
-  width: 100%;
-  position: relative;
-}
-
-section div.section-1 h2 {
-  position: absolute;
-  top: 50px;
-  right: 50%;
-  transform: translateX(50%);
-}
-section div.section-1 h1 {
-  font-size: 48px;
-  width: 100%;
-  position: absolute;
-  top: 120px;
-  right: 50%;
-  transform: translateX(50%);
-  font-weight: bold;
-}
-section div.section-1 p {
-  width: 100%;
-  position: absolute;
-  top: 230px;
-  right: 50%;
-  transform: translateX(50%)
-}
-
-section div.section-1 a {
-  display: block;
-  width: 160px;
-  height: 50px;
-  background-color: #5DD396;
-  color: white;
-  padding: 10px 0;
-  position: absolute;
-  top: 350px;
-  right: 50%;
-  transform: translateX(50%);
-}
-
-.section-2 {
-  background-color: #F47A79;
-  width: 100%;
-  position: relative;
-  text-align: center;
-  color: white;
-  overflow: hidden;
-}
-
-section div.section-2 h2 {
-  font-size: 35px;
-  padding-top: 40px; 
-}
-
-section div.section-2 div {
-  /*outline: 1px solid blue;*/
-  width: 350px;
-  display: inline-block;
-  padding: 70px 0;
-}
-
-section div.section-2 div img {
-  width: 200px;
-}
-
-section div.section-2 div h5{
-  margin-bottom: 5px;
-}
-
-section div.section-2 div h6{
-  margin: 0;
-}
-
-.section-3 {
-  text-align: center;
-}
-
-section div.section-3 img {
-  width: 70%;
-  padding-top: 30px;
-}
-
-section div.section-3 h2 {
-  padding-top: 40px;
-  font-size: 35px;
-}
-
-.section-4 {
-  /*outline: 1px solid pink;*/
-  text-align: center;
-  overflow: hidden;
-  text-align: center;
-  margin: 0 9.5%;
-  padding-bottom: 50px;
-}
-
-section div.section-4 div {
-  /*outline: 1px solid red;*/
-  width: 300px;
-  margin: 30px;
-  float: left;
-}
-
-section div.section-4 img {
-  width: 100%;
-}
-
-section div.section-4 p {
-  font-weight: bold;
-}
-
-footer {
-  width: 100%;
-  background-color: #363A46;
-  text-align: center;
-  color: white;
-  margin: 0;
-}
-
-footer p{
-  margin: 0;
-  padding: 20px 0;
+  margin: 0 auto;
+  padding-top: 100px;
 }
 
 img {
-  vertical-align: middle;
+  vertical-align: middle; /*alineacion vertical*/
 }
 
 .container {
   width: 1200px;
-  margin-right: auto;
+  margin-right: auto;/*para que este centrado*/
   margin-left: auto;
   padding-left: 14px;
   padding-right: 14px;
@@ -216,21 +50,175 @@ img {
 }
 
 .m-0 {
-  margin: 0px;
+  margin: 0px;/*clase para quitar los margenes*/
 }
 
 a {
   color: #373B47;
-  text-decoration: none;
+  text-decoration: none; /*le quita el subrayado a la etiqueta a*/
 }
 
 a:hover {
-  color: #E95853;
+  color: #E95853;/*le da un nuevo color a la etiqueta mientras el usuario pase el mouse por ahi*/
 }
 
-.text-uppercase {
+.text-uppercase {/*clase que convierte en mayusculas*/
   text-transform: uppercase;
 }
 
 /*ESCRIBE TU CÓDIGO DESDE AQUÍ*/
+
+header {
+  /*outline: 1px solid blue;*/
+  background-color: white;
+  box-sizing: border-box; /*hace que lo aplicado no pase el tamaño de caja indicado*/
+  width: 100%;
+  overflow: hidden;/*para que sus hijos flotantes respeten a su contenedor*/
+  position: fixed;/*le da una posicion fija en el navegador*/
+  top: 0;
+  z-index: 1000;/*le da importancia pora que cubra los otros elementos*/
+}
+ul {
+  /*outline: 1px solid red;*/
+  float: left;/*elementos que flotan a la izquierda*/
+  list-style: none; /*le quita las viñetas de lista*/
+  margin: 0 0 0 130px;
+  padding: 0;
+}
+
+li {
+  /*outline: 1px solid green;*/
+  display: inline-block;/*hace que esten en una sola linea*/
+  margin: 35px 20px;
+  font-weight: bold;/*hacer bold la fuente*/
+}
+
+header img {
+  width: 70px;
+  float: right;/*para que el logo este pegado a la parte derecha del header*/
+  margin: 15px 150px 15px 15px;
+}
+
+.section-1{
+  text-align: center;
+  position: relative;/*para que sus elementos hijos con position absolute se posicionen en base a el*/
+  color: white;
+}
+.section-1 img{
+  width: 100%;
+  position: relative;/*para que la imagen pueda quedar de fondo*/
+}
+
+section div.section-1 h2 {
+  position: absolute;/*posicionarla sobre la imagen*/
+  top: 50px;
+  right: 50%;
+  transform: translateX(50%);
+}
+section div.section-1 h1 {
+  font-size: 48px;
+  width: 100%;
+  position: absolute;/*posicionarla sobre la imagen*/
+  top: 120px;
+  right: 50%;/*se posiciona del medio para la izquierda*/
+  transform: translateX(50%);/*con esta propiedad se mueve la mitad de su tamaño hacia la derecha*/
+  font-weight: bold;
+}
+section div.section-1 p {
+  width: 100%;
+  position: absolute;/*posicionarla sobre la imagen*/
+  top: 230px;
+  right: 50%;
+  transform: translateX(50%)
+}
+
+section div.section-1 a {
+  display: block;/*para poder darle medida y que el cursor del mouse se muestre como enlace mientras se cubre todo la caja que lo contiene*/
+  width: 160px;
+  height: 50px;
+  background-color: #5DD396;
+  color: white;
+  padding: 10px 0;/*padding superiror e inferior para centrarlo*/
+  position: absolute;/*posicionarla sobre la imagen*/
+  top: 350px;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.section-2 {
+  background-color: #F47A79;
+  width: 100%;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+section div.section-2 h2 {
+  font-size: 35px;
+  padding-top: 40px; 
+}
+
+section div.section-2 div {
+  /*outline: 1px solid blue;*/
+  width: 350px;/*dandole dimencion a cada contenedor*/
+  display: inline-block; /*para que se comporten como elementos en linea*/
+  padding: 70px 0;
+}
+
+section div.section-2 div img {
+  width: 200px;/*dimenciones de la imagen*/
+}
+
+section div.section-2 div h5{
+  margin-bottom: 5px;
+}
+
+.section-3 {
+  text-align: center;
+}
+
+section div.section-3 img {
+  width: 70%;
+  padding-top: 30px;
+}
+
+section div.section-3 h2 {
+  padding-top: 40px;
+  font-size: 35px;
+}
+
+.section-4 {
+  /*outline: 1px solid pink;*/
+  text-align: center;
+  overflow: hidden;/*para que sus hijos flotantes lo respeten*/
+  text-align: center;
+  margin: 0 1%;/*para centrarlo*/
+  padding-bottom: 50px;
+}
+
+section div.section-4 div {
+  /*outline: 1px solid red;*/
+  width: 300px;
+  margin: 40px;
+  float: left;/*flotan a su izquierda*/
+}
+
+section div.section-4 img {
+  width: 100%;
+}
+
+section div.section-4 p {
+  font-weight: bold;
+}
+
+footer {
+  width: 100%;
+  background-color: #363A46;
+  text-align: center;
+  color: white;
+}
+
+footer p{
+  padding: 20px 0;
+}
 
